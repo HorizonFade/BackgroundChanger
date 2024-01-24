@@ -28,10 +28,6 @@ namespace BackgroundFigger
             {
                 Console.WriteLine("Invalid selection or wallpaper URL is empty.");
             }
-            
-
-
-            Console.ReadLine();
         }
 
         static void DownloadImage(string imageUrl, string localPath)
@@ -56,14 +52,20 @@ namespace BackgroundFigger
             string img5 = "https://i.redd.it/ceetrhas51441.jpg";
             string img6 = "https://i.kym-cdn.com/entries/icons/original/000/047/549/kurt_angle_meme.jpg";
             string img7 = "https://uploads.dailydot.com/d40/de/1128722a06dafd6c-e1496770911424.jpg";
+            string img8 = "https://i.ytimg.com/vi/xrkOdp5wUtQ/sddefault.jpg";
+            string img9 = "https://pbs.twimg.com/media/EVlnkohWoAM1qrz.jpg";
+            string img10 = "https://i.imgflip.com/3i2kpm.jpg";
 
             Console.WriteLine("a: geile Schnecke");
             Console.WriteLine("b: Transe");
             Console.WriteLine("c: Money Boy");
             Console.WriteLine("d: Snoop Dogg");
             Console.WriteLine("e: 2 BlackBoyz kissing (Inklusionsmeme)");
-            Console.WriteLine("f: Suprise");
+            Console.WriteLine("f: Suprise (der Mann)a");
             Console.WriteLine("g: cruisin");
+            Console.WriteLine("i: Inder Lore");
+            Console.WriteLine("i: Merkel Döner");
+            Console.WriteLine("j: Gay Indians");
             string chosenPic = Console.ReadKey().KeyChar.ToString();
             switch (chosenPic)
             {
@@ -74,6 +76,9 @@ namespace BackgroundFigger
                 case "f": return img5;
                 case "g": return img6;
                 case "h": return img7;
+                case "i": return img8;
+                case "j": return img9;
+                case "k": return img10;
                 default: return "";
             }
 
