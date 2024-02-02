@@ -46,9 +46,16 @@ namespace BGFiggerWPF
         }
         static void DownloadImage(string imageUrl, string localPath)
         {
-            using (WebClient wc = new WebClient())
+            try
             {
-                wc.DownloadFile(imageUrl, localPath);
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadFile(imageUrl, localPath);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid Link use .png or .jpg", "Wallpaper");
             }
         }
 
@@ -67,6 +74,23 @@ namespace BGFiggerWPF
                 DownloadImage(imagePreview.Source.ToString(), localPath);
                 SetWallpaper(localPath);
                 MessageBox.Show("Wallpaper changed","Wallpaper");
+            }
+        }
+
+        private void ChangeOwnWallpaper_Click(object sender, RoutedEventArgs e)
+        {
+            string localPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures),
+                "Wallpaper.jpg");
+
+            if (!string.IsNullOrEmpty(myTextBox.Text)&&(myTextBox.Text.EndsWith(".jpg")||myTextBox.Text.EndsWith(".png")))
+            {
+                DownloadImage(myTextBox.Text, localPath);
+                SetWallpaper(localPath);
+                MessageBox.Show("Wallpaper changed", "Wallpaper");
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid Link use .png or .jpg", "Wallpaper");
             }
         }
 
