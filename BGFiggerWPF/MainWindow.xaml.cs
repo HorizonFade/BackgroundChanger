@@ -31,16 +31,13 @@ namespace BGFiggerWPF
             InitializeComponent();
             myListBox.ItemsSource = new List<string>()
             {
-                "Geile Schnecke",
-                "Tranny",
+                "Schnecke",
                 "Money Boy",
                 "Snoop Dogg",
-                "2 Dudes Kissing",
                 "Surprise",
                 "Cruisin",
-                "Inder Lore",
-                "Merkel Döner",
-                "Gay Indians"
+                "Indian",
+                "Merkel Döner"
             };
 
         }
@@ -97,15 +94,12 @@ namespace BGFiggerWPF
         private void myListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string img1 = "https://i.ytimg.com/vi/hP0EFEaH7HM/maxresdefault.jpg";
-            string img2 = "https://content1.promiflash.de/article-images/video_1080/olivia-jones-schaut-neutral.jpg";
-            string img3 = "https://campus-springbreak.de/wp-content/uploads/2023/03/CSB23-MoneyBoy-Post-960x636.jpg";
-            string img4 = "https://picstatio.com/large/lhrp9o/snoop-dogg-celebrity-rapper-hd-wallpaper.jpg";
-            string img5 = "https://i.redd.it/ceetrhas51441.jpg";
-            string img6 = "https://i.kym-cdn.com/entries/icons/original/000/047/549/kurt_angle_meme.jpg";
-            string img7 = "https://uploads.dailydot.com/d40/de/1128722a06dafd6c-e1496770911424.jpg";
-            string img8 = "https://i.ytimg.com/vi/xrkOdp5wUtQ/sddefault.jpg";
-            string img9 = "https://pbs.twimg.com/media/EVlnkohWoAM1qrz.jpg";
-            string img10 = "https://i.imgflip.com/3i2kpm.jpg";
+            string img2 = "https://campus-springbreak.de/wp-content/uploads/2023/03/CSB23-MoneyBoy-Post-960x636.jpg";
+            string img3 = "https://picstatio.com/large/lhrp9o/snoop-dogg-celebrity-rapper-hd-wallpaper.jpg";
+            string img4 = "https://i.kym-cdn.com/entries/icons/original/000/047/549/kurt_angle_meme.jpg";
+            string img5 = "https://uploads.dailydot.com/d40/de/1128722a06dafd6c-e1496770911424.jpg";
+            string img6 = "https://i.ytimg.com/vi/xrkOdp5wUtQ/sddefault.jpg";
+            string img7 = "https://pbs.twimg.com/media/EVlnkohWoAM1qrz.jpg";
 
             switch (myListBox.SelectedIndex)
             {
@@ -116,9 +110,6 @@ namespace BGFiggerWPF
                 case 4: imagePreview.Source = new BitmapImage(new Uri(img5)); break;
                 case 5: imagePreview.Source = new BitmapImage(new Uri(img6)); break;
                 case 6: imagePreview.Source = new BitmapImage(new Uri(img7)); break;
-                case 7: imagePreview.Source = new BitmapImage(new Uri(img8)); break;
-                case 8: imagePreview.Source = new BitmapImage(new Uri(img9)); break;
-                case 9: imagePreview.Source = new BitmapImage(new Uri(img10)); break;
             }
 
         }

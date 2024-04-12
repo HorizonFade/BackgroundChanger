@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BGFiggerWPF"
         mc:Ignorable="d"
-        Title="BackgroundFigger" Height="450" Width="800" ResizeMode="NoResize">
+        Title="Background Changer" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Background="#FF7DFFFA">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
